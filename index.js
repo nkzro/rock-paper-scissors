@@ -19,8 +19,7 @@ function computerPlay() {
 }
 
 function playerPlay() {
-    let play = prompt("Rock, Paper, Scissors. Go!");
-    return play.toLowerCase();
+    return playerSelection;
 }
 
 function playRound(computerSelection, playerSelection) {
@@ -77,4 +76,28 @@ function game() {
     }
 }
 
-console.log(game());
+
+
+
+/**Manipulating the DOM */
+let rock = document.querySelector('#rock');
+let paper = document.querySelector('#paper');
+let scissors = document.querySelector('#scissors');
+
+rock.addEventListener('click', function(e) {
+    playerSelection = this.id;
+});
+
+paper.addEventListener('click', function(e) {
+    playerSelection = this.id;
+});
+
+scissors.addEventListener('click', function(e) {
+    playerSelection = this.id;
+});
+
+rock.addEventListener('click', function (e) {
+    console.log(this.id)           // logs the className of my_element
+    console.log(e.currentTarget === this) // logs `true`
+  })
+  
