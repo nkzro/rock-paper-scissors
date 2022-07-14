@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Monoton&display=swap');
+
+* {
+    background-color: #006494; 
+    height: auto;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Bungee Shade', cursive, 'Courier New', Courier, monospace;
+    font-size: 80px;
+    color: #f8aa77;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: cursive, 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: #f8aa77;
+    margin: 0;
+}
+
+#choose {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    margin: 50px;
+}
+
+.image {
+    border-radius: 50%;
+    width: 15em;
+    border: 5px solid transparent;
+}
+
+#player-computer {
+    font-family: 'Bungee Shade', cursive, 'Courier New', Courier, monospace;
+    font-size: 40px;
+    color: #f8aa77;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    gap: 30%;
+}
+
+.roundResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#playerImage, #computerImage {
+    display: none;
+    border-radius: 50%;
+    width: 3em;
+}
+
+#result {
+    font-family: cursive, 'Courier New', Courier, monospace;
+    color: #f8aa77;
+    text-align: center;
+    font-size: 40px;
+    margin: 50px;
+}
+
+/* This class will be added when img is clicked */
+.selected {
+    border: 5px solid #003554;
+    transform: scale(0.9);
+}
+
+#restart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
