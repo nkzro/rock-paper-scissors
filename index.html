@@ -5,32 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css">
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
-    <header>
-        <h1>Rock, Paper, Scissors</h1>
-        <h3>Choose Your Weapon</h3>
-        <h5>First to 5 wins</h5>
-    </header>
+    <div class="body">
+        <header>
+            <h1>Rock, Paper, Scissors</h1>
+            <h3>It's You Vs the Computer</h3>
+            <h3>First to 5 wins</h3>
+        </header>
+        
+        <div id="choose">
+            <img src="./icons/rock.png" alt="rock" class="image" id="rock">
+            <img src="./icons/paper.png" alt="paper" class="image" id="paper">
+            <img src="./icons/scissors.png" alt="scissors" class="image" id="scissors">
+        </div>
+        
+        <div id="player-computer">
+            <div id="player" class="roundResult">
+                Player
+                <img src="" alt="playerImage" id="playerImage">
+                <div id="playerScore"></div>
+            </div>
+            <div id="computer" class="roundResult">
+                Computer
+                <img src="" alt="computerImage" id="computerImage">
+                <div id="computerScore"></div>
+            </div>
+        </div>
+        
+    
+        <div id="result">
+        </div>
 
-    <div id="choose">
-        <button class="btn" id="rock">Rock</button>
-        <button class="btn" id="paper">Paper</button>
-        <button class="btn" id="scissors">Scissors</button>
     </div>
 
-    <div id="player-computer">
-        <div id="player">
-            Player
-            <div id="playerScore"></div>
-        </div>
-        <div id="computer">
-            Computer
-            <div id="computerScore"></div>
-        </div>
-    </div>
-
-    <div id="result"></div>
 </body>
 </html>

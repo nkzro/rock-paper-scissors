@@ -1,10 +1,10 @@
-const btns = document.querySelectorAll('.btn');
+const images = document.querySelectorAll('.image');
 const result = document.querySelector('#result');
 const player = document.querySelector('#player');
 const computer = document.querySelector('#computer');
-
-// player.textContent = "Player";
-// computer.textContent = "Computer";
+const restart = document.querySelector('#restart');
+const playerImage = document.querySelector('#playerImage');
+const computerImage = document.querySelector('#computerImage');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
         result.textContent = "You lose! " + computerSelection + " beats " + playerSelection;
         computerScore++;
             if (computerScore === 5) {
-                result.textContent = "You lose the game. Better luck next time.";
+                result.textContent = "You lost the game. Better luck next time.";
             }
         }
         else if ((computerSelection === "rock" && playerSelection === "paper") || 
@@ -46,16 +46,35 @@ function playRound(playerSelection, computerSelection) {
         
         document.querySelector("#computerScore").textContent = computerScore;
         document.querySelector("#playerScore").textContent = playerScore;
-        
+
         return;
-    }
-    
+}
+
+
 
 /**Manipulating the DOM */
-btns.forEach(button => {
-    button.addEventListener('click', (e) => {
+images.forEach(image => {
+    image.addEventListener('click', (e) => {
         if (playerScore < 5 && computerScore < 5) {
-            playRound(e.target.id, computerPlay());
+            let playerSelection = e.target.id
+            let computerSelection = computerPlay();
+            playRound(playerSelection,computerSelection);
+
+            playerImage.src = `./icons/${playerSelection}.png`;
+            playerImage.style.display ='block';
+
+            computerImage.src = `./icons/${computerSelection}.png`;
+            computerImage.style.display ='block';
         }
     });
 });
+
+//Transform images when clicked
+images.forEach(image => {
+    image.addEventListener('mousedown', (e) => {
+        image.classList.add('selected')
+    })
+    image.addEventListener('mouseup', (e) => {
+        image.classList.remove('selected')
+    })
+})
