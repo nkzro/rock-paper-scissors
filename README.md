@@ -2,10 +2,10 @@
 In this project, I create an interactive project where a user can play rock, paper, scissors with a computer using javascript. The major skills 
 that were handy in making this project were:
 
-- unctions
+- Functions
 - DOM Manipulation
 - Event Handling
 - (and of course) Googling
 
-Feel free to preview my project using the link below.
+Feel free to preview my project using the link.
  https://nkzro.github.io/rock-paper-scissors/
